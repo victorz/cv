@@ -43,7 +43,8 @@ const data: Resume = {
     name: "Victor Zamanian",
     dateOfBirth: new Date(1987, 1, 26),
     description: [
-      "A curious and quality-focused software engineer, eager to learn new technologies and efficient worklows. He studied Interaction & Design at Umeå University, with a large focus on programming. He is interested in technology, language, nature, sports, music, movies, etc.",
+      "A curious and quality-focused software engineer, eager to learn new technologies and efficient worklows. Studied Interaction & Design at Umeå University, with a large focus on programming. Interests include technology, language, science, nature, sports, music, movies, gaming, etc.",
+      'Strong proponent of "Clean Code", Functional Programming, as well as correct and robust software.',
     ],
     contact: {
       email: "victor.zamanian@gmail.com",
@@ -100,8 +101,9 @@ const data: Resume = {
       title: 'Raketech Group Holding – TV Sports Guide ("TVMatchen")',
       start: "Summer of 2017",
       end: "Fall of 2017",
-      description: "Development of Mobile app development in iOS",
-      technologies: ["Android", "Java", "iOS", "Objective-C", "Git"],
+      description:
+        'Development of new mobile app "TVMatchen" for iOS and Android.',
+      technologies: ["Android", "iOS", "Java", "Objective-C", "Git"],
     },
     {
       company: "Codemill AB",
@@ -172,6 +174,8 @@ const data: Resume = {
         "Custom Elements",
         "Angular",
         "Lit",
+        "SCSS",
+        "PostCSS",
         "TypeScript",
         "Video",
         "Broadcasting",
@@ -210,7 +214,14 @@ const data: Resume = {
       title: "Accurate Video: Edit",
       description:
         "Development of a web-based video editing application, as well as in-house Custom Elements library.",
-      technologies: ["Angular", "SCSS", "TypeScript", "JavaScript", "Lit"],
+      technologies: [
+        "Angular",
+        "SCSS",
+        "PostCSS",
+        "TypeScript",
+        "JavaScript",
+        "Lit",
+      ],
     },
   ],
   languageSkills: [
