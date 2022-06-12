@@ -75,7 +75,7 @@ const allSkills = computed<string[]>(() =>
         <h1>Education</h1>
       </header>
       <section class="education" v-for="edu in education" :key="edu.school">
-        <h1>{{ edu.school }}</h1>
+        <h1>{{ edu.school }}{{ edu.city && `, ${edu.city}` }}</h1>
         <h2>{{ edu.start }}{{ edu.end && `–${edu.end}` }}</h2>
         <template v-if="Array.isArray(edu.description)">
           <p v-for="(p, index) in edu.description" :key="index">{{ p }}</p>
