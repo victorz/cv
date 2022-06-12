@@ -1,7 +1,15 @@
-<script setup lang="ts"></script>
-
+<script setup lang="ts">
+import bioImg from "@/assets/profile_pic.jpg";
+</script>
 <template>
-  <main></main>
+  <main>
+    <div id="bio">
+      <img id="bio-pic" :src="bioImg" alt="Bio profile picture" />
+      <p :key="index" v-for="(p, index) in resumeData.bio.description">
+        {{ p }}
+      </p>
+    </div>
+  </main>
 </template>
 
 <style>
@@ -13,5 +21,10 @@
   padding: 2rem;
 
   font-weight: normal;
+}
+
+#bio-pic {
+  width: 200px;
+  clip-path: circle();
 }
 </style>
