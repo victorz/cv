@@ -280,6 +280,12 @@ const data: Resume = {
     "Video",
     "Audio",
     "Signal Processing",
+    "Jest",
+    "Matlab",
+    "OpenGL",
+    "PostgresSQL",
+    "GraphQL",
+    "SQLite",
   ],
 };
 
