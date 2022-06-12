@@ -23,56 +23,68 @@ const allSkills = computed<string[]>(() =>
 </script>
 <template>
   <main>
-    <div id="bio">
+    <section id="bio">
       <div class="pic-name">
         <img id="bio-pic" :src="bioImg" alt="Bio profile picture" />
         <div class="name">{{ resumeData.bio.name }}</div>
       </div>
+      <h1>Bio</h1>
       <p :key="index" v-for="(p, index) in resumeData.bio.description">
         {{ p }}
       </p>
-    </div>
+    </section>
     <section id="skills">
       <h1>Knowledge</h1>
       <ul class="skills">
         <li v-for="skill in allSkills" :key="skill">{{ skill }}</li>
       </ul>
     </section>
-    <section class="project" v-for="project in projects" :key="project.title">
-      <h1>{{ project.title }}</h1>
-      <h2>
-        {{ project.company }}{{ project.city && ` (${project.city})` }} &ndash;
-        {{ project.start }}–{{ project.end ? `${project.end}` : "now" }}
-      </h2>
-      <template v-if="Array.isArray(project.description)">
-        <p
-          class="description"
-          v-for="(paragraph, index) in project.description"
-          :key="index"
-        >
-          {{ paragraph }}
-        </p>
-      </template>
-      <template v-else>
-        <p>{{ project.description }}</p>
-      </template>
-      Technologies:
-      <ul class="skills">
-        <li v-for="skill in project.technologies" :key="skill">
-          {{ skill }}
-        </li>
-      </ul>
-    </section>
-    <section class="education" v-for="edu in education" :key="edu.school">
-      <h1>{{ edu.school }}</h1>
-      <h2>{{ edu.start }}{{ edu.end && `–${edu.end}` }}</h2>
-      <template v-if="Array.isArray(edu.description)">
-        <p v-for="(p, index) in edu.description" :key="index">{{ p }}</p>
-      </template>
-      <template v-else>
-        <p>{{ edu.description }}</p>
-      </template>
-    </section>
+    <article>
+      <header>
+        <h1>Projects</h1>
+      </header>
+      <section class="project" v-for="project in projects" :key="project.title">
+        <h1>{{ project.title }}</h1>
+        <h2>
+          {{ project.company
+          }}{{ project.city && ` (${project.city})` }} &ndash;
+          {{ project.start }}–{{ project.end ? `${project.end}` : "now" }}
+        </h2>
+        <template v-if="Array.isArray(project.description)">
+          <p
+            class="description"
+            v-for="(paragraph, index) in project.description"
+            :key="index"
+          >
+            {{ paragraph }}
+          </p>
+        </template>
+        <template v-else>
+          <p>{{ project.description }}</p>
+        </template>
+        Technologies:
+        <ul class="skills">
+          <li v-for="skill in project.technologies" :key="skill">
+            {{ skill }}
+          </li>
+        </ul>
+      </section>
+    </article>
+    <article>
+      <header>
+        <h1>Education</h1>
+      </header>
+      <section class="education" v-for="edu in education" :key="edu.school">
+        <h1>{{ edu.school }}</h1>
+        <h2>{{ edu.start }}{{ edu.end && `–${edu.end}` }}</h2>
+        <template v-if="Array.isArray(edu.description)">
+          <p v-for="(p, index) in edu.description" :key="index">{{ p }}</p>
+        </template>
+        <template v-else>
+          <p>{{ edu.description }}</p>
+        </template>
+      </section>
+    </article>
   </main>
 </template>
 
@@ -83,6 +95,10 @@ const allSkills = computed<string[]>(() =>
   section {
     break-inside: avoid-page;
   }
+}
+
+header > h1 {
+  font-size: 2em;
 }
 
 #app {
@@ -96,7 +112,6 @@ const allSkills = computed<string[]>(() =>
 .pic-name {
   display: flex;
   place-items: center;
-  margin-bottom: 2em;
 
   & .name {
     font-size: 40px;
@@ -110,7 +125,7 @@ const allSkills = computed<string[]>(() =>
 }
 
 h1 {
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-size: 1.5em;
 }
 
@@ -122,7 +137,6 @@ h2 {
 p {
   line-height: normal;
   margin-bottom: 0.5em;
-  /* color: red; */
 }
 
 ul.skills {
