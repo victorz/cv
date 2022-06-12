@@ -283,7 +283,7 @@ const data: Resume = {
     "Jest",
     "Matlab",
     "OpenGL",
-    "PostgresSQL",
+    "PostgreSQL",
     "GraphQL",
     "SQLite",
   ],
