@@ -43,7 +43,7 @@ const data: Resume = {
     name: "Victor Zamanian",
     dateOfBirth: new Date(1987, 1, 26),
     description: [
-      "A curious and quality-focused software engineer, eager to learn new technologies and efficient worklows. Studied Interaction & Design at Umeå University, with a large focus on programming. Interests include technology, language, science, nature, sports, music, movies, gaming, etc.",
+      "A curious and quality-focused software engineer, eager to learn new technologies and efficient workflows. Studied Interaction & Design at Umeå University, with a large focus on programming. Interests include technology, language, science, nature, sports, music, movies, gaming, etc.",
       'Strong proponent of "Clean Code", Functional Programming, as well as correct and robust software.',
     ],
     contact: {
