@@ -23,6 +23,7 @@ export interface Project {
 
 export interface Resume {
   bio: {
+    name: string;
     dateOfBirth: Date;
     description: string | string[];
     contact: {
@@ -39,10 +40,11 @@ export interface Resume {
 
 const data: Resume = {
   bio: {
-    description: [
-      "Victor is a curious and quality-focused software engineer, eager to learn new technologies and efficient worklows. He studied Interaction & Design at Umeå University, with a large focus on programming. He is interested in technology, language, nature, sports, music, movies, etc.",
-    ],
+    name: "Victor Zamanian",
     dateOfBirth: new Date(1987, 1, 26),
+    description: [
+      "A curious and quality-focused software engineer, eager to learn new technologies and efficient worklows. He studied Interaction & Design at Umeå University, with a large focus on programming. He is interested in technology, language, nature, sports, music, movies, etc.",
+    ],
     contact: {
       email: "victor.zamanian@gmail.com",
       phone: "+46762622262",
@@ -86,21 +88,20 @@ const data: Resume = {
         "It was also a great opportunity to hone debugging skills, as well as learning how to explain to others (students) at an approriate level what's wrong with their code.",
       ],
       technologies: [
-        "git",
-        "bash",
-        "teaching",
-        "interpersonal skills",
-        "debugging",
+        "Git",
+        "Bash",
+        "Teaching",
+        "Interpersonal skills",
+        "Debugging",
       ],
     },
     {
       company: "Codemill AB",
-      city: "Umeå",
       title: 'Raketech Group Holding – TV Sports Guide ("TVMatchen")',
       start: "Summer of 2017",
       end: "Fall of 2017",
       description: "Development of Mobile app development in iOS",
-      technologies: ["Android", "Java", "iOS", "Objective-C", "git"],
+      technologies: ["Android", "Java", "iOS", "Objective-C", "Git"],
     },
     {
       company: "Codemill AB",
@@ -117,11 +118,12 @@ const data: Resume = {
         "NodeJS",
         "JavaScript",
         "TypeScript",
-        "git",
+        "Git",
       ],
     },
     {
       company: "Codemill AB",
+      city: "Umeå, Sweden / Munich, Germany",
       title: "ProSiebenSat.1 MEDIA SE - Unified Content Project",
       start: "February 2018",
       end: "October 2019",
@@ -130,9 +132,9 @@ const data: Resume = {
         "This work mostly involved writing web front-end in Vue, but had many moving parts that had to be understood in order to cooperate with back-end business logic etc.",
       ],
       technologies: [
-        "git",
+        "Git",
         "Vue 2",
-        "python",
+        "Python",
         "Cantemo Portal",
         "Vidispine",
         "Helm",
@@ -152,7 +154,7 @@ const data: Resume = {
         "React",
         "Preact",
         "TypeScript",
-        "yarn",
+        "Yarn",
         "Webpack",
         "ESLint",
         "React Hooks",
@@ -165,7 +167,7 @@ const data: Resume = {
       start: "October 2019",
       end: "May 2021",
       description:
-        "Development of a web-based application for video/content veri�cation/quality control with frame-accurate video support, as well as an in-house Custom Elements component library build using Lit.",
+        "Development of a web-based application for video/content verification/quality control with frame-accurate video support, as well as an in-house Custom Elements component library build using Lit.",
       technologies: [
         "Custom Elements",
         "Angular",
@@ -175,7 +177,7 @@ const data: Resume = {
         "Broadcasting",
         "Media",
         "Web API",
-        "git",
+        "Git",
       ],
     },
     {
@@ -260,6 +262,7 @@ const data: Resume = {
     "Docker",
     "YAML",
     "TOML",
+    "3D graphics",
   ],
 };
 
