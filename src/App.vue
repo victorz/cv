@@ -14,11 +14,11 @@ const age = computed<number>(() =>
 );
 
 const projects = computed(() => reverse(resumeData.projects));
-
+const education = computed(() => reverse(resumeData.education));
 const allSkills = computed<string[]>(() =>
   uniq(
     resumeData.projects.flatMap((p) => p.technologies).concat(resumeData.skills)
-  )
+  ).sort()
 );
 </script>
 <template>
@@ -32,7 +32,13 @@ const allSkills = computed<string[]>(() =>
         {{ p }}
       </p>
     </div>
-    <section id="projects" v-for="project in projects" :key="project.title">
+    <section id="skills">
+      <h1>Knowledge</h1>
+      <ul class="skills">
+        <li v-for="skill in allSkills" :key="skill">{{ skill }}</li>
+      </ul>
+    </section>
+    <section class="project" v-for="project in projects" :key="project.title">
       <h1>{{ project.title }}</h1>
       <h2>
         {{ project.company }}{{ project.city && ` (${project.city})` }} &ndash;
@@ -57,17 +63,27 @@ const allSkills = computed<string[]>(() =>
         </li>
       </ul>
     </section>
-    <section id="skills">
-      <h1>Knowledge</h1>
-      <ul class="skills">
-        <li v-for="skill in allSkills" :key="skill">{{ skill }}</li>
-      </ul>
+    <section class="education" v-for="edu in education" :key="edu.school">
+      <h1>{{ edu.school }}</h1>
+      <h2>{{ edu.start }}{{ edu.end && `–${edu.end}` }}</h2>
+      <template v-if="Array.isArray(edu.description)">
+        <p v-for="(p, index) in edu.description" :key="index">{{ p }}</p>
+      </template>
+      <template v-else>
+        <p>{{ edu.description }}</p>
+      </template>
     </section>
   </main>
 </template>
 
 <style lang="scss">
 @import "./assets/base.css";
+
+@media print {
+  section {
+    break-inside: avoid-page;
+  }
+}
 
 #app {
   max-width: 720px;
@@ -80,6 +96,7 @@ const allSkills = computed<string[]>(() =>
 .pic-name {
   display: flex;
   place-items: center;
+  margin-bottom: 2em;
 
   & .name {
     font-size: 40px;
@@ -108,13 +125,16 @@ p {
   /* color: red; */
 }
 
-ul.skills li {
-  display: inline;
-  margin-left: auto;
-  font-weight: 700;
+ul.skills {
+  padding-left: 1.5em;
+  li {
+    display: inline;
+    margin-left: none;
+    font-weight: 700;
 
-  &:not(:last-child)::after {
-    content: ", ";
+    &:not(:last-child)::after {
+      content: ", ";
+    }
   }
 }
 </style>
