@@ -8,7 +8,7 @@ export interface EducationItem {
   start: string;
   end?: string;
   city?: string;
-  description?: string;
+  description?: string | string[];
 }
 
 export interface Project {
@@ -22,7 +22,15 @@ export interface Project {
 }
 
 export interface Resume {
-  bio: string;
+  bio: {
+    dateOfBirth: Date;
+    description: string | string[];
+    contact: {
+      email: string;
+      phone: string;
+      linkedIn?: string;
+    };
+  };
   skills: Skill[];
   projects: Project[];
   languageSkills: LanguageSkill[];
@@ -30,7 +38,17 @@ export interface Resume {
 }
 
 const data: Resume = {
-  bio: "Victor is a curious and quality-focused software engineer, eager to learn new technologies and efficient worklows. He studied Interaction & Design at Umeå University, with a large focus on programming. He is interested in technology, language, nature, sports, music, movies, etc.",
+  bio: {
+    description: [
+      "Victor is a curious and quality-focused software engineer, eager to learn new technologies and efficient worklows. He studied Interaction & Design at Umeå University, with a large focus on programming. He is interested in technology, language, nature, sports, music, movies, etc.",
+    ],
+    dateOfBirth: new Date(1987, 1, 26),
+    contact: {
+      email: "victor.zamanian@gmail.com",
+      phone: "+46762622262",
+      linkedIn: "https://www.linkedin.com/in/victorzamanian/",
+    },
+  },
   education: [
     {
       school: 'Östra Gymnasieskolan ("high school")',
@@ -51,7 +69,8 @@ const data: Resume = {
       school: "Umeå University",
       start: "Spring of 2006",
       end: "Spring of 2017",
-      description: "Civil engineer programme in Interaction and Design",
+      description:
+        "Master of Science Programme in Interaction Technology and Design Engineering",
     },
   ],
   projects: [
@@ -77,17 +96,17 @@ const data: Resume = {
     {
       company: "Codemill AB",
       city: "Umeå",
-      title: 'Raketech Group Holding -- TV Sports Guide ("TVMatchen")',
+      title: 'Raketech Group Holding – TV Sports Guide ("TVMatchen")',
       start: "Summer of 2017",
-      end: "Fall of 2017 (approx 3 months)",
+      end: "Fall of 2017",
       description: "Development of Mobile app development in iOS",
       technologies: ["Android", "Java", "iOS", "Objective-C", "git"],
     },
     {
       company: "Codemill AB",
-      title: "Västerbottens-Kuriren -- front-end developer consultant",
+      title: "Västerbottens-Kuriren – front-end developer consultant",
       start: "August 2017",
-      end: "February 2018 (approx 6 months)",
+      end: "February 2018",
       description:
         "Front-end developer for the largest local newspaper's new online news publishing platform.",
       technologies: [
@@ -122,6 +141,26 @@ const data: Resume = {
     },
     {
       company: "Codemill AB",
+      title: 'Proof of Concept – Accurate Video Comments/"Review"',
+      start: "October 2019",
+      end: "November 2019",
+      description: [
+        "Development from scratch of a simple video review product: leave comments on specific frames/time stamps or time spans in a video.",
+        'This was the precursor/prototype to what would later be "Accurate Video Review" developed for Box.com. (See other project.)',
+      ],
+      technologies: [
+        "React",
+        "Preact",
+        "TypeScript",
+        "yarn",
+        "Webpack",
+        "ESLint",
+        "React Hooks",
+        "Redux",
+      ],
+    },
+    {
+      company: "Codemill AB",
       title: "Accurate Video: Validate",
       start: "October 2019",
       end: "May 2021",
@@ -145,7 +184,8 @@ const data: Resume = {
       start: "May 2021",
       end: "October 2021",
       description: [
-        "Development of a single-page application for Box.com where you can review a video stored on Box.com. You can make comments, tag other users, add timestamps to comments, and see timestamps in the video timeline.",
+        "Development of a single-page video review application in Vue 3, from scratch, start to finish, for Box.com. You can make comments, tag other users, add timestamps to comments, and see timestamps in the video timeline.",
+        "AWS Lambda was used to process and redirect the user through the authentication process.",
         "OpenAPI was used to generate a back-end API library for the front-end, in order to easily work against box.com's API.",
       ],
       technologies: [
@@ -158,7 +198,17 @@ const data: Resume = {
         "AWS",
         "AWS Lambda",
         "Serverless",
+        "Webpack",
+        "Vite",
       ],
+    },
+    {
+      company: "Codemill AB",
+      start: "January 2022",
+      title: "Accurate Video: Edit",
+      description:
+        "Development of a web-based video editing application, as well as in-house Custom Elements library.",
+      technologies: ["Angular", "SCSS", "TypeScript", "JavaScript", "Lit"],
     },
   ],
   languageSkills: [
@@ -179,6 +229,37 @@ const data: Resume = {
     "Functional programming",
     "C",
     "Java",
+    "npm",
+    "yarn",
+    "C++",
+    "Haskell",
+    "Functional Programming",
+    "Clean Code",
+    "Preact",
+    "Algorithm Complexity Analysis",
+    "Webpack",
+    "Vite",
+    "XML",
+    "ESLint",
+    "VS Code",
+    "Android",
+    "Communication",
+    "ECMAScript",
+    "GitLab",
+    "GitHub",
+    "Shell Scripting",
+    "Bash",
+    "Linux",
+    "Golang",
+    "Node.js",
+    "Express",
+    "REST",
+    "Lit",
+    "Jira",
+    "Confluence",
+    "Docker",
+    "YAML",
+    "TOML",
   ],
 };
 
