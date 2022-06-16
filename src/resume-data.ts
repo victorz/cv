@@ -287,6 +287,7 @@ const data: Resume = {
     "GraphQL",
     "SQLite",
     "Pinia",
+    "Deno",
   ],
 };
 
