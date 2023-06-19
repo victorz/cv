@@ -224,6 +224,15 @@ const data: Resume = {
         "Lit",
       ],
     },
+    {
+      company: "One Group",
+      start: "May 2023",
+      end: "May 2023",
+      title: "Konstfack redesign",
+      description:
+        "Implementation of existing design for new page templates, for the existing CMS of konstfack.se.",
+      technologies: ["HTML", "CSS", "SCSS", "JavaScript", "Responsive Design"],
+    },
   ],
   languageSkills: [
     ["Swedish", "native language"],
