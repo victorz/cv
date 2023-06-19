@@ -241,6 +241,7 @@ const data: Resume = {
   skills: [
     "Vue 2",
     "Vue 3",
+    "Nuxt",
     "React",
     "Angular",
     "SCSS",
