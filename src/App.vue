@@ -121,7 +121,10 @@ header > h1 {
 
 #bio-pic {
   width: 150px;
-  clip-path: circle();
+  border: 2px solid var(--vt-c-black-mute);
+  border-radius: 50%;
+  box-sizing: content-box;
+  filter: brightness(125%) contrast(125%);
 }
 
 h1 {
