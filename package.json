@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@types/luxon": "^2.3.2",
-    "luxon": "^2.4.0",
     "ramda": "^0.28.0",
     "vue": "^3.2.36"
   },

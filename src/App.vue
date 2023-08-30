@@ -1,17 +1,8 @@
 <script setup lang="ts">
 import bioImg from "@/assets/profile_pic.jpg";
 import { computed } from "@vue/reactivity";
-import { DateTime } from "luxon";
 import { reverse, uniq } from "ramda";
 import resumeData from "./resume-data";
-
-const age = computed<number>(() =>
-  Math.floor(
-    DateTime.fromJSDate(new Date())
-      .diff(DateTime.fromJSDate(resumeData.bio.dateOfBirth))
-      .as("years")
-  )
-);
 
 const projects = computed(() => reverse(resumeData.projects));
 const education = computed(() => reverse(resumeData.education));
