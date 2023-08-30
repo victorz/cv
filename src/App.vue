@@ -116,6 +116,15 @@ header > h1 {
   border-radius: 50%;
   box-sizing: content-box;
   filter: brightness(125%) contrast(125%);
+
+  transition: scale 200ms, translate 300ms, border-radius 400ms;
+  z-index: 1;
+
+  &:hover {
+    scale: 2;
+    translate: 20% 40%;
+    border-radius: 20%;
+  }
 }
 
 h1 {
