@@ -40,7 +40,7 @@ export interface Resume {
 
 const data: Resume = {
   bio: {
-    name: "Victor Zamanian",
+    name: "Victor Zaman&shy;ian",
     dateOfBirth: new Date(1987, 1, 26),
     description: [
       "A curious and quality-focused software engineer, eager to learn new technologies and efficient workflows. Studied Interaction Technology and Design Engineering at Umeå University, with a large focus on programming. Interests include technology, language, science, nature, sports, music, movies, gaming, etc. Born in 1987.",

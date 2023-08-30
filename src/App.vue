@@ -17,7 +17,7 @@ const allSkills = computed<string[]>(() =>
     <section id="bio">
       <div class="pic-name">
         <img id="bio-pic" :src="bioImg" alt="Bio profile picture" />
-        <div class="name">{{ resumeData.bio.name }}</div>
+        <div class="name" v-html="resumeData.bio.name"></div>
       </div>
       <h1>Bio</h1>
       <p :key="index" v-for="(p, index) in resumeData.bio.description">
@@ -105,13 +105,13 @@ header > h1 {
   place-items: center;
 
   & .name {
-    font-size: 40px;
+    font-size: min(8vw, 40px);
     margin-left: 1rem;
   }
 }
 
 #bio-pic {
-  width: 150px;
+  width: min(50%, 150px);
   border: 2px solid var(--vt-c-black-mute);
   border-radius: 50%;
   box-sizing: content-box;
@@ -120,10 +120,12 @@ header > h1 {
   transition: scale 200ms, translate 300ms, border-radius 400ms;
   z-index: 1;
 
-  &:hover {
+  &:hover,
+  &:active {
     scale: 2;
-    translate: 20% 40%;
+    translate: 50% 50%;
     border-radius: 20%;
+    user-select: none;
   }
 }
 
