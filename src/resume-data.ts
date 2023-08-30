@@ -43,7 +43,7 @@ const data: Resume = {
     name: "Victor Zamanian",
     dateOfBirth: new Date(1987, 1, 26),
     description: [
-      "A curious and quality-focused software engineer, eager to learn new technologies and efficient workflows. Studied Interaction Technology and Design Engineering at Umeå University, with a large focus on programming. Interests include technology, language, science, nature, sports, music, movies, gaming, etc.",
+      "A curious and quality-focused software engineer, eager to learn new technologies and efficient workflows. Studied Interaction Technology and Design Engineering at Umeå University, with a large focus on programming. Interests include technology, language, science, nature, sports, music, movies, gaming, etc. Born in 1987.",
       'Strong proponent of "Clean Code", Functional Programming, as well as correct and robust software.',
     ],
     contact: {
@@ -212,6 +212,7 @@ const data: Resume = {
     {
       company: "Codemill AB",
       start: "January 2022",
+      end: "January 2023",
       title: "Accurate Video: Edit",
       description:
         "Development of a web-based video editing application, as well as in-house Custom Elements library.",
@@ -230,7 +231,7 @@ const data: Resume = {
       end: "May 2023",
       title: "Konstfack redesign",
       description:
-        "Implementation of existing design for new page templates, for the existing CMS of konstfack.se.",
+        "Smaller project: Implementation of existing design for new page templates, for the existing CMS of konstfack.se.",
       technologies: ["HTML", "CSS", "SCSS", "JavaScript", "Responsive Design"],
     },
   ],
