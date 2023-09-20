@@ -43,8 +43,9 @@ const data: Resume = {
     name: "Victor Zaman&shy;ian",
     dateOfBirth: new Date(1987, 1, 26),
     description: [
-      "A curious and quality-focused software engineer, eager to learn new technologies and efficient workflows. Studied Interaction Technology and Design Engineering at Umeå University, with a large focus on programming. Interests include technology, language, science, nature, sports, music, movies, gaming, etc. Born in 1987.",
-      'Strong proponent of "Clean Code", Functional Programming, as well as correct and robust software.',
+      "A curious and quality-focused software engineer, eager to learn new technologies and efficient workflows. Studied Interaction Technology and Design Engineering at Umeå University, with a large focus on programming.",
+      'Strong proponent of "Clean Code", Functional Programming; keen on correct and robust software, as well as top-of-the-line User Experiences.',
+      "Interests include technology, language, science, nature, sports, music, movies, gaming, etc. Born in 1987. Father of two.",
     ],
     contact: {
       email: "victor.zamanian@gmail.com",
@@ -151,7 +152,7 @@ const data: Resume = {
       start: "October 2019",
       end: "November 2019",
       description: [
-        "Development from scratch of a simple video review product: leave comments on specific frames/time stamps or time spans in a video.",
+        "Development, as Lead Front-end Developer, from scratch of a simple video review product: leave comments on specific frames/time stamps or time spans in a video.",
         'This was the precursor/prototype to what would later be "Accurate Video Review" developed for Box.com. (See other project.)',
       ],
       technologies: [
@@ -192,7 +193,7 @@ const data: Resume = {
       start: "May 2021",
       end: "October 2021",
       description: [
-        "Development of a single-page video review application in Vue 3, from scratch, start to finish, for Box.com. You can make comments, tag other users, add timestamps to comments, and see timestamps in the video timeline.",
+        "Development, as Lead Developer, of a single-page video review application in Vue 3, from scratch, start to finish, for Box.com. You can make comments, tag other users, add timestamps to comments, and see timestamps in the video timeline.",
         "AWS Lambda was used to process and redirect the user through the authentication process.",
         "OpenAPI was used to generate a back-end API library for the front-end, in order to easily work against box.com's API.",
       ],
