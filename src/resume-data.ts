@@ -300,6 +300,9 @@ const data: Resume = {
     "SQLite",
     "Pinia",
     "Deno",
+    "Bun",
+    "User Research",
+    "User Experience",
   ],
 };
 
