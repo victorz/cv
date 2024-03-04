@@ -14,7 +14,7 @@
     "lib": ["ESNext"],
     "strict": true,
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "types": ["node"],
     "composite": true,
     "paths": {
