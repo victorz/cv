@@ -227,13 +227,30 @@ const data: Resume = {
       ],
     },
     {
-      company: "One Group",
+      company: 'One Group (now "Visionite")',
       start: "May 2023",
       end: "May 2023",
       title: "Konstfack redesign",
       description:
         "Smaller project: Implementation of existing design for new page templates, for the existing CMS of konstfack.se.",
       technologies: ["HTML", "CSS", "SCSS", "JavaScript", "Responsive Design"],
+    },
+    {
+      company: "Sartorius",
+      start: "October 2023",
+      title: "SIMCA-Online Web Client",
+      description:
+        "In charge of bringing an old React application up to modern standards regarding infrastructure and tooling, as well as developing further features.",
+      technologies: [
+        "React",
+        "Vite",
+        "Redux",
+        "Plotly",
+        "MUI",
+        "Vitest",
+        "JavaScript",
+        "TypeScript",
+      ],
     },
   ],
   languageSkills: [
@@ -303,6 +320,7 @@ const data: Resume = {
     "Bun",
     "User Research",
     "User Experience",
+    "MongoDB",
   ],
 };
 

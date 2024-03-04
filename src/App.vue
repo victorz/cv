@@ -67,7 +67,7 @@ const allSkills = computed<string[]>(() =>
       </header>
       <section class="education" v-for="edu in education" :key="edu.school">
         <h1>{{ edu.school }}{{ edu.city && `, ${edu.city}` }}</h1>
-        <h2>{{ edu.start }}{{ edu.end && `–${edu.end}` }}</h2>
+        <h2>{{ edu.start }}{{ edu.end && `&ndash;${edu.end}` }}</h2>
         <template v-if="Array.isArray(edu.description)">
           <p v-for="(p, index) in edu.description" :key="index">{{ p }}</p>
         </template>
@@ -112,7 +112,7 @@ header > h1 {
 
 #bio-pic {
   width: min(50%, 150px);
-  border: 2px solid var(--vt-c-black-mute);
+  border: 2px solid var(--color-border);
   border-radius: 50%;
   box-sizing: content-box;
   filter: brightness(125%) contrast(125%);
@@ -126,6 +126,7 @@ header > h1 {
     translate: 50% 50%;
     border-radius: 20%;
     user-select: none;
+    border: 2px solid var(--color-border-hover);
   }
 }
 
