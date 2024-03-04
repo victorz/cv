@@ -1,3 +1,4 @@
 {
-  "git.branchProtection": []
+  "git.branchProtection": [],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
